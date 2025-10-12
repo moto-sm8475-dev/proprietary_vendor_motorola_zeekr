@@ -1,5 +1,5 @@
 
-s21415¤œ»¢"ô 
+s21415¤Ö¡§"ô 
 carrier_volte_available_bool(
 maxSubjectLengthP
 moto_smart_5g_enabled_bool( 

@@ -4457,6 +4457,7 @@ cc_prebuilt_library_shared {
                 "com.qti.feature2.realtimeserializer",
                 "com.qti.feature2.rtmcx",
                 "libchilog",
+                "com.qti.feature2.swmfsr",
                 "libz",
                 "libc",
                 "libm",
@@ -4523,6 +4524,7 @@ cc_prebuilt_library_shared {
                 "com.qti.feature2.rtmcx",
                 "libchilog",
                 "libBSTNodeUtils",
+                "com.qti.feature2.swmfsr",
                 "libz",
                 "libc",
                 "libm",
@@ -4589,6 +4591,7 @@ cc_prebuilt_library_shared {
                 "com.qti.feature2.realtimeserializer",
                 "com.qti.feature2.rtmcx",
                 "libchilog",
+                "com.qti.feature2.swmfsr",
                 "libz",
                 "libc",
                 "libm",
@@ -4655,6 +4658,7 @@ cc_prebuilt_library_shared {
                 "com.qti.feature2.realtimeserializer",
                 "com.qti.feature2.rtmcx",
                 "libchilog",
+                "com.qti.feature2.swmfsr",
                 "libz",
                 "libc",
                 "libm",
@@ -4721,6 +4725,7 @@ cc_prebuilt_library_shared {
                 "com.qti.feature2.realtimeserializer",
                 "com.qti.feature2.rtmcx",
                 "libchilog",
+                "com.qti.feature2.swmfsr",
                 "libz",
                 "libc",
                 "libm",
@@ -5563,6 +5568,54 @@ cc_prebuilt_library_shared {
         android_arm64: {
             srcs: [
                 "proprietary/vendor/lib64/com.qti.feature2.swmf.so",
+            ],
+            shared_libs: [
+                "libc++",
+                "libcutils",
+                "liblog",
+                "libsync",
+                "android.hardware.graphics.common@1.1",
+                "libhardware",
+                "libhidlbase",
+                "libhidltransport",
+                "libcamera_metadata",
+                "libcamxcommonutils",
+                "libcamxsettingsmanager",
+                "libqti_vndfwk_detect",
+                "libutils",
+                "android.hardware.graphics.allocator@4.0",
+                "android.hardware.graphics.mapper@4.0",
+                "libgralloc.qti",
+                "libgralloctypes",
+                "vendor.qti.hardware.display.allocator@4.0",
+                "vendor.qti.hardware.display.mapper@4.0",
+                "vendor.qti.hardware.display.mapperextensions@1.1",
+                "libmot_engine_settings",
+                "libmot_chi_desktop_helper",
+                "com.qti.chi.override",
+                "libchilog",
+                "libz",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "com.qti.feature2.swmfsr",
+    owner: "motorola",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/com.qti.feature2.swmfsr.so",
             ],
             shared_libs: [
                 "libc++",
@@ -9409,7 +9462,7 @@ cc_prebuilt_library_shared {
 }
 
 prebuilt_rfsa {
-    name: "bm2n08",
+    name: "vendor_lib_rfsa_adsp_bm2n08_bin",
     filename: "bm2n08.bin",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n08.bin",
@@ -9418,7 +9471,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "bm2n09",
+    name: "vendor_lib_rfsa_adsp_bm2n09_bin",
     filename: "bm2n09.bin",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/bm2n09.bin",
@@ -9427,7 +9480,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "capi_elus_rx",
+    name: "vendor_lib_rfsa_adsp_capi_elus_rx_so",
     filename: "capi_elus_rx.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/capi_elus_rx.so",
@@ -9436,7 +9489,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "capi_elus_tx",
+    name: "vendor_lib_rfsa_adsp_capi_elus_tx_so",
     filename: "capi_elus_tx.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/capi_elus_tx.so",
@@ -9445,7 +9498,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libadsp_jpege_skel",
+    name: "vendor_lib_rfsa_adsp_libadsp_jpege_skel_so",
     filename: "libadsp_jpege_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libadsp_jpege_skel.so",
@@ -9454,7 +9507,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libapn_dsp_skel",
+    name: "vendor_lib_rfsa_adsp_libapn_dsp_skel_so",
     filename: "libapn_dsp_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libapn_dsp_skel.so",
@@ -9463,7 +9516,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libbitml_nsp_skel",
+    name: "vendor_lib_rfsa_adsp_libbitml_nsp_skel_so",
     filename: "libbitml_nsp_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libbitml_nsp_skel.so",
@@ -9472,7 +9525,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libbitml_nsp_v2_skel",
+    name: "vendor_lib_rfsa_adsp_libbitml_nsp_v2_skel_so",
     filename: "libbitml_nsp_v2_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so",
@@ -9481,7 +9534,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libcamera_nn_skel",
+    name: "vendor_lib_rfsa_adsp_libcamera_nn_skel_so",
     filename: "libcamera_nn_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libcamera_nn_skel.so",
@@ -9490,7 +9543,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libhdr_skel",
+    name: "vendor_lib_rfsa_adsp_libhdr_skel_so",
     filename: "libhdr_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libhdr_skel.so",
@@ -9499,7 +9552,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libhme_dsp_skel",
+    name: "vendor_lib_rfsa_adsp_libhme_dsp_skel_so",
     filename: "libhme_dsp_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libhme_dsp_skel.so",
@@ -9508,7 +9561,7 @@ prebuilt_rfsa {
 }
 
 prebuilt_rfsa {
-    name: "libmctfengine_skel",
+    name: "vendor_lib_rfsa_adsp_libmctfengine_skel_so",
     filename: "libmctfengine_skel.so",
     owner: "motorola",
     src: "proprietary/vendor/lib/rfsa/adsp/libmctfengine_skel.so",

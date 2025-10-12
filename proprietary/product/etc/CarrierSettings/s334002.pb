@@ -1,5 +1,5 @@
 
-s334002¤œ»¢"¥
+s334002¤Ö¡§"¥
 maxImageHeight˜
 maxImageWidth 
 maxMessageSize€€@

@@ -1,5 +1,5 @@
 
-s24681¤œ»¢"…+
+s24681¤Ö¡§"…+
 #carrier_nr_availabilities_int_array:
 maxImageHeight˜
 maxImageWidth 
